@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_uis/whatsapp_chats/whatsapp_tabview.dart';
+import 'package:flutter_uis/uis/whatsapp_chats/whatsapp_tabview.dart';
 
 void main() {
   runApp(const MyApp());

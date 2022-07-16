@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uis/uis/whatsapp_chats/chats.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -41,11 +42,11 @@ class WhatsAppTab extends StatelessWidget {
             indicatorColor: Colors.white,
             isScrollable: true,
             indicatorSize: TabBarIndicatorSize.tab,
-            labelPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 5),
+            labelPadding: const EdgeInsets.symmetric(horizontal: 0, vertical: 5),
             tabs: [
-              Container(
+              SizedBox(
                 width: yourWidth,
-                child: Icon(Icons.camera_alt),
+                child: const Icon(Icons.camera_alt),
               ),
               Container(
                 width: yourWidth * 3,
@@ -76,7 +77,7 @@ class WhatsAppTab extends StatelessWidget {
         ),
         body: const TabBarView(
           physics: BouncingScrollPhysics(),
-          children: [Text("Camera"), Text("Chats"), Text("Status"), Text("Calls")],
+          children: [Text("Camera"), ChatsList(), Text("Status"), Text("Calls")],
         ),
       ),
     );
