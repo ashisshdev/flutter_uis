@@ -1,47 +1,91 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uis/uis/whatsapp_chats/archived.dart';
 
 class ChatsList extends StatelessWidget {
   const ChatsList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-        separatorBuilder: (context, index) {
-          return const Divider(
-            height: 0,
-            thickness: 1,
-          );
-        },
-        itemCount: dummyChats.length,
-        physics: const BouncingScrollPhysics(),
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(dummyChats[index].imagePath),
-            ),
-            title: Row(children: [
-              Text(dummyChats[index].name),
-              const Spacer(),
-              Text(
-                dummyChats[index].lastMessageTime,
-                textScaleFactor: 0.85,
-              )
-            ]),
-            subtitle: Row(
-              children: [
-                const Icon(
-                  Icons.done_all,
-                  size: 16,
+    return ListView(
+      padding: const EdgeInsets.only(top: 0, bottom: 5),
+      physics: const BouncingScrollPhysics(),
+      children: [
+        InkWell(
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              return Archived();
+            }));
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 15, bottom: 10),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                SizedBox(
+                  width: 25,
                 ),
-                Flexible(
-                    child: Text(
-                  "  " + dummyChats[index].lastMessage,
-                  overflow: TextOverflow.ellipsis,
-                ))
+                Icon(
+                  Icons.archive_outlined,
+                  color: Color(0XFF075E54),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  "Archived",
+                  textScaleFactor: 1.3,
+                ),
+                Spacer(),
+                Text(
+                  "2   ",
+                  style: TextStyle(color: Color(0XFF075E54)),
+                )
               ],
             ),
-          );
-        });
+          ),
+        ),
+        ListView.builder(
+            padding: const EdgeInsets.only(top: 0),
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: dummyChats.length,
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(dummyChats[index].imagePath),
+                ),
+                title: Row(children: [
+                  Text(dummyChats[index].name),
+                  const Spacer(),
+                  Text(
+                    dummyChats[index].lastMessageTime,
+                    textScaleFactor: 0.85,
+                  )
+                ]),
+                subtitle: Row(
+                  children: [
+                    const Icon(
+                      Icons.done_all,
+                      size: 16,
+                    ),
+                    Flexible(
+                        child: Text(
+                      "  " + dummyChats[index].lastMessage,
+                      overflow: TextOverflow.ellipsis,
+                    ))
+                  ],
+                ),
+              );
+            }),
+        Container(
+          padding: const EdgeInsets.only(bottom: 80, top: 15),
+          alignment: Alignment.center,
+          child: Text("Tap and hold on a chat for more options",
+              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.6)),
+              textScaleFactor: 0.8),
+        ),
+      ],
+    );
   }
 }
 
