@@ -25,5 +25,5 @@ samples, guidance on mobile development, and a full API reference.
 [2 whatsapp home img]: https://github.com/ashhiish/flutter_uis/blob/main/screenshots/2%20whatsapp_chat.png?raw=true "WhatsApp Home Screen UI"
 
 [3 whatsapp archived]: https://github.com/ashhiish/flutter_uis/tree/main/lib/uis/whatsapp_chats
-[3 whatsapp archived img]: https://github.com/ashhiish/flutter_uis/blob/main/screenshots/2%20whatsapp_chat.png?raw=true "WhatsApp Archived Screen UI"
+[3 whatsapp archived img]: https://github.com/ashhiish/flutter_uis/blob/main/screenshots/3%20whatsapp_archived.PNG "WhatsApp Archived Screen UI"
 
