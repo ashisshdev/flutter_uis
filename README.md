@@ -3,9 +3,9 @@
 A collection of User Interfaces I build with Flutter Framework for practicing my skills.
 ---------------
 
-[Aesthetic Login UI][1 loginui] | [WhatsApp Home Screen UI][2 whatsapp home] | [WhatsApp Archived Screen UI][3 whatsapp archived]
---- | --- | ---
-![][1 loginui img] | ![][2 whatsapp home img] | ![][3 whatsapp archived img]
+[Aesthetic Login UI][1 loginui] | [WhatsApp Home Screen UI][2 whatsapp home] | [WhatsApp Archived Screen UI][3 whatsapp archived] | [MIUI Calculator UI][4 calculator] 
+--- | --- | --- | --- 
+![][1 loginui img] | ![][2 whatsapp home img] | ![][3 whatsapp archived img] | ![][4 calculator img]
 
 #
 ### Getting Started with Flutter
@@ -27,3 +27,5 @@ samples, guidance on mobile development, and a full API reference.
 [3 whatsapp archived]: https://github.com/ashhiish/flutter_uis/tree/main/lib/uis/whatsapp_chats
 [3 whatsapp archived img]: https://github.com/ashhiish/flutter_uis/blob/main/screenshots/3%20whatsapp_archived.PNG "WhatsApp Archived Screen UI"
 
+[4 calculator]: https://github.com/ashhiish/flutter_uis/tree/main/lib/uis/miui_calculator
+[4 calculator img]: https://github.com/ashhiish/flutter_uis/blob/main/screenshots/4%20calculator.png?raw=true "MIUI Calculator UI"
