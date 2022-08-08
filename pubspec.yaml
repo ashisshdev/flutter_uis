@@ -64,7 +64,8 @@ flutter:
     - assets/images/uis/
     - assets/images/uis/whatsapp_ui/
     - assets/images/uis/whatsapp_ui/persons/
-
+    - assets/images/uis/instagram/
+    - assets/images/uis/instagram/posts/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

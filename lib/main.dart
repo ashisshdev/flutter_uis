@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_uis/uis/miui_calculator/calculator.dart';
+import 'package:flutter_uis/uis/instagram/instagram_home.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: CalculatorUI(),
-    );
+        debugShowCheckedModeBanner: false,
+        home: InstagramHome());
   }
 }
