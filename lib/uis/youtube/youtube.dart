@@ -33,6 +33,7 @@ class Youtube extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0.4,
         currentIndex: currentIndex,
+        type: BottomNavigationBarType.fixed,
         fixedColor: Colors.red,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Home", activeIcon: Icon(Icons.home)),
